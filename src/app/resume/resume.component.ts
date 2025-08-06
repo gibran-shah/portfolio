@@ -16,7 +16,7 @@ import { JobHistoryComponent } from './job-history/job-history.component';
     JobHistoryComponent
   ],
   templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.sass', './resume-fonts.sass']
+  styleUrls: ['./resume.component.sass']
 })
 export class ResumeComponent {
 
