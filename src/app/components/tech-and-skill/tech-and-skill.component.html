@@ -1,0 +1,5 @@
+<div class="tech-and-skill-container">
+    <b>{{category}}:</b>&nbsp;<span *ngFor="let skill of skills; let i = index">
+        {{skill}}{{ i < skills.length - 1 ? ',&nbsp;' : '' }}
+    </span>
+</div>

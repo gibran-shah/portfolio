@@ -1,3 +1,10 @@
 <div class="tech-and-skills-container">
-    Technologies and skills
+    <div class="tag-container">
+        <app-tag [text]="'Technologies & Skills'"></app-tag>
+    </div>
+    <ul>
+        <li *ngFor="let skillSet of skillSets">
+            <app-tech-and-skill [category]="skillSet.category" [skills]=skillSet.skills />
+        </li>
+    </ul>
 </div>
