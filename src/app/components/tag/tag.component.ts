@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './tag.component.sass'
 })
 export class TagComponent {
-  @Input() text: string = '';
+
 }
