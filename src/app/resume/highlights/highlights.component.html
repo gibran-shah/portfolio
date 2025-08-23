@@ -9,16 +9,32 @@
         <app-tag>CORE COMPETENCIES / AREA OF EXPERTISE</app-tag>
     </div>
     <div>
-        <table></table>
+        <table>
+            <tr>
+                <td><app-competency>Full Stack Developer</app-competency></td>
+                <td><app-competency>Angular, React, Vue</app-competency></td>
+                <td><app-competency>C#/.NET, Node.js, Java</app-competency></td>
+            </tr>
+            <tr>
+                <td><app-competency>SQL & NoSQL Databases</app-competency></td>
+                <td><app-competency>Design Patterns</app-competency></td>
+                <td><app-competency>AWS, Azure, Google Cloud</app-competency></td>
+            </tr>
+            <tr>
+                <td><app-competency>REST, SOAP, GraphQL</app-competency></td>
+                <td><app-competency>Team Leadership</app-competency></td>
+                <td><app-competency>DevOps & CI/CD Support</app-competency></td>
+            </tr>
+        </table>
     </div>
     <div>
-        <i>Supported Multi-Million-Dollar Large-Scale Software Development Projects ~ Exceeded KPIs</i>
+        <span class="kpi-blurb">Supported Multi-Million-Dollar Large-Scale Software Development Projects ~ Exceeded KPIs</span>
     </div>
     <div>
         <ul>
-            <li>xxx</li>
-            <li>yyy</li>
-            <li>zzz</li>
+            <li *ngFor="let blurb of jobSummaryBlurbs">
+                <app-job-summary [blurb]="blurb"/>
+            </li>
         </ul>
     </div>
     <div>
@@ -26,10 +42,9 @@
     </div>
     <div>
         <ul>
-            <li>Bachelor of Science in Computer Science</li>
-            <li>Bachelor of Arts in Psychology, Honours</li>
-            <li>Courses on ...</li>
-            <li>High School Diploma</li>
+            <li *ngFor="let blurb of educationBlurbs">
+                <app-education [educationDescription]="blurb" />
+            </li>
         </ul>
     </div>
 </div>
