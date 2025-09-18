@@ -1,0 +1,35 @@
+<div class="job-details-container" *ngIf="job">
+    <app-tag>Professional Experience</app-tag>
+    <br/>
+    <table>
+        <tr>
+            <td><div class="left">{{ job.companyName }}</div></td>
+            <td><div class="right">{{ job.location }}</div></td>
+        </tr>
+        <tr>
+            <td><div class="left">{{ job.position }}</div></td>
+            <td><div class="right">{{ job.startYear }} - {{ job.endYear }}</div></td>
+        </tr>
+    </table>
+    <div class="skill-summary-container">
+        <ul>
+            <li *ngFor="let skill of job.skillSummary; let i = index">
+                {{ skill }} {{ i < job.skillSummary.length - 1 ? '~' : '' }}
+            </li>
+        </ul>
+    </div>
+    <div class="summary-container" [innerHTML]="job.summary"></div>
+    <ul class="job-highlights">
+        <li *ngFor="let highlight of job.highlights">
+            <div class="detail-container">
+                <div><span class="checkmark">&check;</span></div>
+                <div>
+                    <b>{{ highlight.title }}: </b>
+                    <span class="short-description">{{ highlight.shortDescription }}</span>
+                    —
+                    <span>{{ highlight.longDescription }}</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,3 +1,5 @@
 <div class="job-history-container">
-    job history
+    <div *ngFor="let job of history">
+        <app-job-details [job]="job" />
+    </div>
 </div>

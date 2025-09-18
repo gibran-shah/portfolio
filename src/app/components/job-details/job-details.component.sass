@@ -1,0 +1,65 @@
+@import ../../colors.sass
+
+.job-details-container
+    width: 100%
+
+    table
+        font-weight: bold
+        width: 95%
+        margin: auto
+
+        td div
+            display: flex
+            flex-direction: row
+            align-items: center
+
+            &.left
+                justify-content: flex-start
+
+            &.right
+                justify-content: flex-end
+    
+    .skill-summary-container
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+
+        font-weight: bold
+        color: $dark-red
+
+        ul
+            list-style: none
+            padding: 0
+
+            li
+                display: inline-block
+                margin-right: 10px
+    
+    .summary-container
+        width: 95%
+        margin: auto
+        text-align: justify
+
+    .job-highlights
+        width: 95%
+        list-style-type: none
+        padding-left: 15px
+
+        li
+            .detail-container
+                width: 100%
+                margin-bottom: 10px
+
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                align-items: stretch
+
+                .checkmark
+                    color: $dark-green
+                    font-weight: bold
+                    margin-right: 10px
+
+                .short-description
+                    color: $dark-blue
